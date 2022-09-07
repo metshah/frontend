@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+}
+h1 {
+    color: white;
+    font-family: verdana;
+}
+h2 {
+    color: white;
+    font-family: verdana;
+}
+h3 {
+    color: hsl(204, 40%, 87%);
+    font-family: verdana;
+}
+h4 {
+    color: hsl(204, 40%, 87%);
+    font-family: verdana;
+  }
+p {
+    color: #dddddd;
+    font-family: segoe ui;
+}
+a {
+    font-family: segoe ui;
+    color: black; 
+    background-color: rgb(240, 240, 240);
+}
+blockquote {
+    color: #dddddd;
+    border:2px solid lightgray;
+    padding: 12px;
+    margin: 18px;
+}
+address {
+    color: #dcdcdc;
+}

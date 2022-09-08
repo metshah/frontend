@@ -1,5 +1,10 @@
 body {
     background-color: black;
+    background-image: url('resources/background.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: cover;
     padding: 16px;
 }
 h1 {

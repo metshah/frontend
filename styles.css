@@ -9,6 +9,7 @@ body {
     font-family: segoe ui;
     padding: 16px;
 }
+
 h1 {
     color: white;
     font-family: verdana;
@@ -64,6 +65,9 @@ address {
     padding-top: 24px;
     font-size: 15px;
     color: #dcdcdc;
+}
+area {
+    cursor: pointer;
 }
 table {
     width: 35%;

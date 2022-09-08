@@ -1,8 +1,24 @@
 <!DOCTYPE html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Ankara, Districts, District list">
+    <meta name="description" content="Ankara Districts">  
     <title>Districts</title>
     <link rel="icon" type="image/x-icon" href="/resources/favicon.png">
     <link rel="stylesheet" href="../styles.css" />
+    <script>
+      function myFunction() {
+        var x = document.getElementsByClassName("dTable");
+        for (var i = 0; i < x.length; i++) {
+          if(x[i].style.display === "none") {
+            x[i].style.display = "block";
+          }
+          else {
+            x[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <button onclick="document.location='../index.html'">Click here to go back</button> 
@@ -11,21 +27,21 @@
       Since it doesn't show the name before clicking, you can also use this map
       to memorize the districts
     </p>
-    <img src="ankara.png" alt="Ankara" usemap="#dismap" />
-    <map name="dismap">
+    <img src="ankara.png" width="800" alt="Ankara" usemap="#dismap" />
+    <map name="dismap" >
       <area
         shape="circle"
-        coords="130, 180, 18"
+        coords="130, 180, 16"
         onclick="alert('You clicked on Nallıhan!');"
       />
       <area
         shape="circle"
-        coords="276, 202, 18"
+        coords="276, 202, 16"
         onclick="alert('You clicked on Beypazarı!');"
       />
       <area
         shape="circle"
-        coords="337, 409, 18"
+        coords="337, 409, 16"
         onclick="alert('You clicked on Polatlı!');"
       />
       <area
@@ -138,19 +154,6 @@
     <br>
     <br>
     <br>
-    <script>
-      function myFunction() {
-        var x = document.getElementsByClassName("dTable");
-        for (var i = 0; i < x.length; i++) {
-          if(x[i].style.display === "block") {
-            x[i].style.display = "none";
-          }
-          else {
-            x[i].style.display = "block";
-          }
-        }
-      }
-    </script>
     <button onclick="myFunction()">Hide / show table</button>
     <div class="dTable">
       <table>

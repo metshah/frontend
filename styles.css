@@ -5,6 +5,8 @@ body {
     background-position: right bottom;
     background-attachment: fixed;
     background-size: cover;
+    color: #dddddd;
+    font-family: segoe ui;
     padding: 16px;
 }
 h1 {
@@ -16,14 +18,22 @@ h2 {
     font-family: verdana;
 }
 h3 {
+    font-size: 20px;
     color: hsl(204, 40%, 87%);
     font-family: verdana;
 }
 h4 {
+    font-size: 19px;
     color: hsl(204, 40%, 87%);
     font-family: verdana;
-  }
+}
+h5 {
+    font-size: 18px;
+    color: hsl(204, 40%, 87%);
+    font-family: verdana;
+}
 p {
+    font-size: 17px;
     color: #dddddd;
     font-family: segoe ui;
 }
@@ -46,9 +56,29 @@ a:active {
 blockquote {
     color: #dddddd;
     border:2px solid lightgray;
+    font-size: 15px;
     padding: 12px;
     margin: 18px;
 }
 address {
+    padding-top: 24px;
+    font-size: 15px;
     color: #dcdcdc;
+}
+table {
+    width: 35%;
+    border-style: dotted;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+tr:nth-child(even) {
+    background-color: #232323;
+}
+th, td {
+    text-align: left;
+    border-style: dotted;
+    border: 1px solid white;
+}
+ul {
+    font-size: 17px;
 }

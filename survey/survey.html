@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, JS" />
+    <meta name="description" content="Metshah's HTML Learning Page!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Survey</title>
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"
+        ><h1>OPLOG Internship HTML <em>Learning Phase</em></h1></a
+      >
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="../map/map.html">Districts of Ankara</a></li>
+          <li>About me</li>
+          <li><a href="../perdetails.html">Personal Details</a></li>
+          <li><a href="../phydetails.html">Physical Details</a></li>
+          <li><a href="../myfavquote.html">Favourite quote</a></li>
+          <li><a href="../testboard.html">Testboard</a></li>
+          <li>Quick Survey</li>
+        </ul>
+      </nav>
+      <article>
+        <fieldset>
+          <legend>Price</legend>
+        <p>
+          The iPhone 14 Pro costs 1299&#8364; in Germany. Meanwhile, the same
+          device with the same storage space costs 2170&euro; in Turkey.
+          &#129395;<br />
+        </p>
+        <form action="result.html" method="get" id="form1">
+          <label>Are you satisfied with the prices?<br /></label>
+          <input type="radio" id="yes" name="yn" value="Yes" disabled>
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="yn" value="No" />
+          <label for="no">No</label>
+          <label for="price"
+            ><br />If not, how much would you like it to be? (in &euro;)</label
+          ><br />
+          <input type="text" id="price" name="price" />
+        </fieldset>
+          <br />
+          <br />
+          <fieldset>
+            <legend>Products</legend>
+            <label for="products">Which Apple products do you own?</label><br />
+            <input
+              type="checkbox"
+              id="macbook"
+              name="macbook"
+              value="MacBook"
+            />
+            <label for="macbook">MacBook</label>
+            <input type="checkbox" id="ipad" name="ipad" value="iPad" />
+            <label for="ipad">iPad</label>
+            <input type="checkbox" id="iphone" name="iphone" value="iPhone" />
+            <label for="iphone">iPhone</label>
+            <input
+              type="checkbox"
+              id="watch"
+              name="watch"
+              value="Apple Watch"
+            />
+            <label for="iphone">Apple Watch</label>
+            <input
+              type="checkbox"
+              id="watch"
+              name="watch"
+              value="Apple Watch"
+            />
+            <label for="iphone">AirPods</label>
+          </fieldset>
+          <br /><br />
+          <fieldset>
+            <legend>Cars</legend>
+            <label for="cars">Write down your favourite car manifacturer<br></label>
+            <input list="cars">
+            <datalist id="cars" name="cars">
+              <option value="audi">Audi</option>
+              <option value="bmw">BMW</option>
+              <option value="mbenz">Mercedes-Benz</option>
+              <option value="volvo">Volvo</option>
+              <option value="vw">Volkswagen</option>
+            </datalist>
+          </fieldset>
+          <br />
+          <br />
+          <fieldset>
+            <legend>Ending:</legend>
+            <label for="favcolor">Your favourite color <br></label>
+            <input type="color" id="favcolor" name="favcolor">
+            <br><br>
+            <label for="agegroup" >Which age group do you belong to?<br></label>
+            <select id="agegroup" name="ages">
+              <option value="u16">Under 16 years</option>
+              <option value="16-25">16-25 years</option>
+              <option value="26-49">26-49 years</option>
+              <option value="50-65">50-65 years</option>
+              <option value="o65">Over 65 years</option>
+            </select>
+            <br>
+            <label for="birthday">Enter your birthday</label>
+            <br>
+            <input type="date" id="birthday" name="birthday">
+            <br><br>
+            <label for="advice"
+              >What more questions should I add? Write down below!</label
+            >
+            <br />
+            <textarea name="advice" rows="7" cols="30"></textarea>
+            <br>
+            
+          </fieldset>
+          <br />
+          <br />
+          <!--Used <output> in testboard.html-->
+        </form>
+        <input type="submit" value="Submit" form="form1" />
+        <input type="submit" formenctype="multipart/form-data" value="Submit Encoded", form="form1">
+      </article>
+    </section>
+    <footer>
+      <div>
+        <a href="https://www.oplog.io" title="Go to OPLOG Site" target="_blank"
+          ><img src="/resources/logo-white.png" alt="OPLOG site" width="225px"
+        /></a>
+        <h4 id="OC">Other Connections:</h4>
+        <a
+          href="https://github.com/metshah"
+          title="My Github Page"
+          target="_blank"
+          ><img
+            src="../resources/github.png"
+            alt="GITHUB"
+            width="48"
+            style="padding: 5px"
+        /></a>
+        <a
+          href="https://linkedin.com/in/ümitmeteşahin"
+          title="My LinkedIn Page"
+          target="_blank"
+          ><img
+            src="../resources/linkedin.png"
+            alt="LINKEDIN"
+            width="48"
+            style="padding: 5px"
+        /></a>
+      </div>
+      <address>
+        Written by Ümit Mete Şahin<br />
+        Contact me via:<br />
+        <a href="mailto:umitmetesahin@gmail.com">e-mail</a><br />
+        oplog.io<br />
+      </address>
+    </footer>
+  </body>
+</html>

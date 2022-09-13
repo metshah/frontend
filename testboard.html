@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="keywords" content="HTML, CSS, JS" />
     <meta name="description" content="Metshah's HTML Learning Page!" />
-    <title>Intern - Home</title>
+    <title>Testboard</title>
     <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,6 +21,7 @@
           <li><a href="phydetails.html">Physical Details</a></li>
           <li><a href="myfavquote.html">Favourite quote</a></li>
           <li>Testboard</li>
+          <li><a href="survey/survey.html">Quick Survey</a></li>
         </ul>
       </nav>
       <article>
@@ -33,26 +34,27 @@
             of the squares on the legs of a right triangle is equal to the
             square on the hypotenuse (the side opposite the right angle)—or, in
             familiar algebraic notation, <var>a<sup>2</sup></var> +
-            <var><sup>2</sup></var> = <var>c<sup>2</sup></var
-            >.
+            <var><sup>2</sup></var> = <var>c<sup>2</sup></var>
           </p>
-          <p>
-            The iPhone 14 Pro costs 1299&#8364; in Germany. Meanwhile, the same
-            device with the same storage space costs 2170&euro; in Turkey.
-            &#129395;<br />
-          </p>
-          <form>
-            <label>Are you satisfied with the prices?<br /></label>
-            <input type="radio" id="yes" name="yn" value="Yes" />
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="yn" value="No" />
-            <label for="no">No</label>
-            <label for="price"
-              ><br />If not, how much would you like it to be? (in
-              &euro;)</label
-            ><br />
-            <input type="text" id="price" name="price" /><br />
-            <input type="submit" value="Submit" />
+          <p>Multiplier:</p>
+          <br />
+          <form action oninput="x.value=parseInt(a.value)*parseInt(b.value)">
+            <input type="number" id="a" name="a" value="50" />
+            x
+            <input type="number" id="b" name="b" value="50" />
+            =
+            <output name="x" for="a b"></output>
+            <br /><br />
+            <label for="pin">Enter a PIN: </label>
+            <input
+              type="password"
+              id="pin"
+              name="pin"
+              placeholder="1234"
+              pattern="[0-9]{4}"
+              size="4"
+              maxlength="4"
+            />
           </form>
         </div>
       </article>

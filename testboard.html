@@ -26,6 +26,91 @@
       </nav>
       <article>
         <div>
+          <canvas width="150" height="70" id="strtxt"></canvas>
+          <script>
+            var c = document.getElementById("strtxt");
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeStyle = "white";
+            ctx.strokeText("Testboard!", 10, 50);
+          </script>
+          <br />
+          <canvas id="grd" width="200" height="100"></canvas>
+          <script>
+            var c = document.getElementById("grd");
+            var ctx = c.getContext("2d");
+            var grd = ctx.createLinearGradient(0, 0, 125, 0);
+
+            grd.addColorStop(0, "white");
+            grd.addColorStop(1, "#232323");
+
+            ctx.fillStyle = grd;
+            ctx.fillRect(10, 10, 150, 80);
+          </script>
+          <br />
+          <canvas width="43" height="43" id="crc1"></canvas>
+          <script>
+            var c = document.getElementById("crc1");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(22, 22, 20, 0, 2 * Math.PI);
+            ctx.strokeStyle = "white";
+            ctx.stroke();
+          </script>
+          <svg width="43" height="43">
+            <circle
+              cx="22"
+              cy="22"
+              r="20"
+              stroke="white"
+              stroke-width="3"
+              fill="#232323"
+            />
+          </svg>
+          <svg width="43" height="43">
+            <rect
+              width="40"
+              height="40"
+              style="fill: #232323; stroke-width: 3; stroke: rgb(255, 255, 255)"
+            />
+          </svg>
+          <svg width="43" height="43">
+            <rect
+              x="0"
+              y="0"
+              rx="7"
+              ry="7"
+              width="40"
+              height="40"
+              style="fill: #232323; stroke: white; stroke-width: 3; opacity: 1"
+            />
+          </svg>
+          <br />
+          <svg height="150" width="200">
+            <defs>
+              <linearGradient id="grad1" x1="0%" x2="100%" x3="0%">
+                <stop
+                  offset="0%"
+                  style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: rgb(0, 0, 0); stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" ry="55" fill="url(#grad1)" />
+            <text
+              fill="#B0E0E6"
+              font-size="35"
+              font-family="Verdana"
+              x="60"
+              y="86"
+            >
+              UMS
+            </text>
+            Sorry, your browser does not support inline SVG.
+          </svg>
           <p>using &lt;code&gt;</p>
           <code> x = 5; y = 6; z = x + y; </code>
           <p>Save this page by pressing <kbd>Ctrl + S</kbd></p>
@@ -56,6 +141,15 @@
               maxlength="4"
             />
           </form>
+          <canvas id="cnv" width="500" height="150"></canvas>
+          <script>
+            var c = document.getElementById("cnv");
+            var ctx = c.getContext("2d");
+            ctx.moveTo(0, 0);
+            ctx.lineTo(500, 150);
+            ctx.strokeStyle = "white";
+            ctx.stroke();
+          </script>
         </div>
       </article>
     </section>

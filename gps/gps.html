@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="HTML, CSS, JS" />
+    <meta name="description" content="Metshah's HTML Learning Page!" />
+    <title>Intern - Home</title>
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>OPLOG Internship HTML <em>Learning Phase</em></h1>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="../map/map.html">Districts of Ankara</a></li>
+          <li><a href="../aboutme/aboutme.html">About me</a></li>
+          <li><a href="../perdetails.html">Personal Details</a></li>
+          <li><a href="../phydetails.html">Physical Details</a></li>
+          <li><a href="../myfavquote.html">Favourite quote</a></li>
+          <li><a href="../testboard.html">Testboard</a></li>
+          <li><a href="../survey/survey.html">Quick Survey</a></li>
+          <li>Get Coordinates</li>
+        </ul>
+      </nav>
+      <article>
+        <p>Click the button to get your current coordinate.</p>
+
+        <button onclick="getLocCurr()">Click!</button>
+
+        <p>Click the button to watch your coordinate.</p>
+
+        <button onclick="getLocWatch()">Click!</button>
+
+        <p id="loc"></p>
+        <script>
+          var x = document.getElementById("loc");
+          function getLocCurr() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+
+          function getLocWatch() {
+            if (navigator.geolocation) {
+              navigator.geolocation.watchPosition(showPosition);
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+
+          function showPosition(position) {
+            x.innerHTML =
+              "Latitude: " +
+              position.coords.latitude +
+              "<br>Longitude: " +
+              position.coords.longitude;
+          }
+
+          function showError(error) {
+            switch (error.code) {
+              case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation.";
+                break;
+              case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable.";
+                break;
+              case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out.";
+                break;
+              case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred.";
+                break;
+            }
+          }
+        </script>
+      </article>
+    </section>
+    <footer>
+      <div>
+        <a href="https://www.oplog.io" title="Go to OPLOG Site" target="_blank"
+          ><img src="/resources/logo-white.png" alt="OPLOG site" width="225px"
+        /></a>
+        <h4 id="OC">Other Connections:</h4>
+        <a
+          href="https://github.com/metshah"
+          title="My Github Page"
+          target="_blank"
+          ><img
+            src="resources/github.png"
+            alt="GITHUB"
+            width="48"
+            style="padding: 5px"
+        /></a>
+        <a
+          href="https://linkedin.com/in/ümitmeteşahin"
+          title="My LinkedIn Page"
+          target="_blank"
+          ><img
+            src="resources/linkedin.png"
+            alt="LINKEDIN"
+            width="48"
+            style="padding: 5px"
+        /></a>
+      </div>
+      <address>
+        Written by Ümit Mete Şahin<br />
+        Contact me via:<br />
+        <a href="mailto:umitmetesahin@gmail.com">e-mail</a><br />
+        oplog.io<br />
+      </address>
+    </footer>
+  </body>
+</html>

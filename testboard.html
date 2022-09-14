@@ -152,6 +152,33 @@
             ctx.stroke();
           </script>
         </div>
+        <script>
+          function allowDrop(ev) {
+            ev.preventDefault();
+          }
+
+          function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+          }
+
+          function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+          }
+        </script>
+        <p>This image is draggable between the two boxes!</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img
+            src="/resources/favicon.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag1"
+            width="80"
+            height="80"
+          />
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       </article>
     </section>
     <footer>

@@ -5,8 +5,8 @@
     <meta name="keywords" content="HTML, CSS, JS" />
     <meta name="description" content="Metshah's HTML Learning Page!" />
     <title>Intern - Home</title>
-    <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <header>
@@ -15,17 +15,39 @@
     <section>
       <nav>
         <ul>
-          <li><a href="map/map.html">Districts of Ankara</a></li>
-          <li><a href="aboutme/aboutme.html">About me</a></li>
-          <li><a href="perdetails.html">Personal Details</a></li>
-          <li><a href="phydetails.html">Physical Details</a></li>
-          <li><a href="myfavquote.html">Favourite quote</a></li>
-          <li><a href="testboard.html">Testboard</a></li>
-          <li><a href="survey/survey.html">Quick Survey</a></li>
-          <li><a href="/gps/gps.html">Get Coordinates</a></li>
-          <li><a href="counter/auto.html">Online Counter</a></li>
+          <li>Auto Counter</li>
+          <li><a href="manual.html">Manual Counter</a></li>
+          <li><a href="../index.html">Back to home page</a></li>
         </ul>
       </nav>
+      <article>
+        <h4>Auto Counter</h4>
+        <button onclick="startCounter()">Play</button>
+        <button onclick="stopCounter()">Stop</button>
+        <p>Count numbers: <output id="result"></output></p>
+        <script>
+          var ctr;
+
+          function startCounter() {
+            if (typeof Worker !== "undefined") {
+              if (typeof ctr == "undefined") {
+                ctr = new Worker("counter.js");
+              }
+              ctr.onmessage = function (event) {
+                document.getElementById("result").innerHTML = event.data;
+              };
+            } else {
+              document.getElementById("result").innerHTML =
+                "Sorry, your browser is unsupported.";
+            }
+          }
+
+          function stopCounter() {
+            ctr.terminate();
+            ctr = undefined;
+          }
+        </script>
+      </article>
     </section>
     <footer>
       <div>
@@ -38,7 +60,7 @@
           title="My Github Page"
           target="_blank"
           ><img
-            src="resources/github.png"
+            src="../resources/github.png"
             alt="GITHUB"
             width="48"
             style="padding: 5px"
@@ -48,7 +70,7 @@
           title="My LinkedIn Page"
           target="_blank"
           ><img
-            src="resources/linkedin.png"
+            src="../resources/linkedin.png"
             alt="LINKEDIN"
             width="48"
             style="padding: 5px"

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang = "en-us">
+<html lang="en-us">
   <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Ankara, Districts, District list">
-    <meta name="description" content="Ankara Districts">  
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Ankara, Districts, District list" />
+    <meta name="description" content="Ankara Districts" />
     <title>Districts</title>
-    <link rel="icon" type="image/x-icon" href="/resources/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
     <link rel="stylesheet" href="../styles.css" />
     <script>
       function myFunction() {
         var x = document.getElementsByClassName("dTable");
         for (var i = 0; i < x.length; i++) {
-          if(x[i].style.display === "none") {
+          if (x[i].style.display === "none") {
             x[i].style.display = "block";
-          }
-          else {
+          } else {
             x[i].style.display = "none";
           }
         }
@@ -23,30 +22,31 @@
   </head>
   <body>
     <header>
-      <a href= "../index.html"><h1>OPLOG Internship HTML <em>Learning Phase</em></h1></a>
+      <a href="/index.html"
+        ><h1>OPLOG Internship CSS <em>Learning Phase</em></h1></a
+      >
     </header>
     <section>
+      <ul>
+        <li><a href="/aboutme/aboutme.html">About me</a></li>
+        <li><a href="/details.html">My Details</a></li>
+        <li><a class="active">Tools</a></li>
+        <li><a href="/testboard.html">Testboard</a></li>
+        <li><a href="/survey/survey.html">Quick Survey</a></li>
+      </ul>
       <nav>
         <ul>
-          <li>Districts of Ankara</a></li>
-          <li><a href="../aboutme/aboutme.html">About me</a></li>
-          <li><a href="../perdetails.html">Personal Details</a></li>
-          <li><a href="../phydetails.html">Physical Details</a></li>
-          <li><a href="../myfavquote.html">Favourite quote</a></li>
-          <li><a href="../testboard.html">Testboard</a></li>
-          <li><a href="../survey/survey.html">Quick Survey</a></li>
-          <li><a href="/gps/gps.html">Get Coordinates</a></li>
-          <li><a href="../counter/auto.html">Online Counter</a></li>
+          <li><a href="/tools/tools.html">Back to tools page</a></li>
         </ul>
       </nav>
       <article>
         <h2>Click on the dots to learn the name of the district!</h2>
         <p>
-          Since it doesn't show the name before clicking, you can also use this map
-          to memorize the districts
+          Since it doesn't show the name before clicking, you can also use this
+          map to memorize the districts
         </p>
         <img src="ankara.png" width="800px" alt="Ankara" usemap="#dismap" />
-        <map name="dismap" >
+        <map name="dismap">
           <area
             shape="circle"
             coords="130, 180, 16"
@@ -168,10 +168,10 @@
             onclick="alert('You clicked on Yenimahalle!');"
           />
         </map>
-        <br>
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
+        <br />
         <button onclick="myFunction()">Hide / show table</button>
         <div class="dTable">
           <table>
@@ -302,21 +302,41 @@
             </tr>
           </table>
         </div>
-    </article>
+      </article>
     </section>
     <footer>
       <div>
-        <a href="https://www.oplog.io" title="Go to OPLOG Site" target="_blank"><img src="../resources/logo-white.png" alt="OPLOG site" width="225px" /></a>
+        <a href="https://www.oplog.io" title="Go to OPLOG Site" target="_blank"
+          ><img src="/resources/logo-white.png" alt="OPLOG site" width="225px"
+        /></a>
         <h4 id="OC">Other Connections:</h4>
-          <a href="https://github.com/metshah" title="My Github Page" target="_blank"><img src="../resources/github.png" alt="GITHUB" width="48" style="padding: 5px;"></a>
-          <a href="https://linkedin.com/in/ümitmeteşahin" title="My LinkedIn Page" target="_blank"><img src="../resources/linkedin.png" alt="LINKEDIN" width="48" style="padding: 5px;"></a>
+        <a
+          href="https://github.com/metshah"
+          title="My Github Page"
+          target="_blank"
+          ><img
+            src="/resources/github.png"
+            alt="GITHUB"
+            width="48"
+            style="padding: 5px"
+        /></a>
+        <a
+          href="https://linkedin.com/in/ümitmeteşahin"
+          title="My LinkedIn Page"
+          target="_blank"
+          ><img
+            src="/resources/linkedin.png"
+            alt="LINKEDIN"
+            width="48"
+            style="padding: 5px"
+        /></a>
       </div>
       <address>
-        Written by Ümit Mete Şahin<br>
-        Contact me via:<br>
-        <a href="mailto:umitmetesahin@gmail.com">e-mail</a><br>
-        oplog.io<br>
-        </address>
+        Written by Ümit Mete Şahin<br />
+        Contact me via:<br />
+        <a href="mailto:umitmetesahin@gmail.com">e-mail</a><br />
+        oplog.io<br />
+      </address>
     </footer>
   </body>
 </html>

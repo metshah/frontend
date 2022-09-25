@@ -7,6 +7,14 @@
     <title>Testboard</title>
     <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .favico {
+        opacity: 0.5;
+      }
+      .favico:hover {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -165,6 +173,7 @@
         <p>This image is draggable between the two boxes!</p>
         <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
           <img
+            class="favico"
             src="/resources/favicon.png"
             draggable="true"
             ondragstart="drag(event)"

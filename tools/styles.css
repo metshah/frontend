@@ -222,3 +222,9 @@ li a:hover {
     padding: 10px;
     border: 1px solid white;
 }
+
+.dTable {
+    width: 275px;
+    height: 200px;
+    overflow: auto;
+}

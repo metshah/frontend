@@ -16,18 +16,20 @@
       <ul>
         <li><a href="/aboutme/aboutme.html">About me</a></li>
         <li><a href="/details.html">My Details</a></li>
-        <li><a class="active">Tools</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Tools</a>
+            <div class="dropdown-content">
+              <a href="/tools/counter/auto.html">Online Counter</a>
+              <a href="/tools/gps/gps.html">Get Coordinate</a>
+              <a href="/tools/map/map.html">Ankara Districts</a>
+            </div>
+          </li>
+        </div>
         <li><a href="/testboard.html">Testboard</a></li>
         <li><a href="/survey/survey.html">Quick Survey</a></li>
       </ul>
-      <nav>
-        <ul>
-          <li><a class="active">Auto counter</a></li>
-          <li><a href="manual.html">Manual counter</a></li>
-          <li><a href="/tools/tools.html">Back to tools page</a></li>
-        </ul>
-      </nav>
       <article>
+        <a href="/tools/counter/manual.html" class="counterbtn">Manual Counter</a>
         <h4>Auto Counter</h4>
         <button onclick="startCounter()">Play</button>
         <button onclick="stopCounter()">Stop</button>

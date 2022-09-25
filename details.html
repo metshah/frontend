@@ -7,6 +7,24 @@
     <title>Personal Details</title>
     <link rel="icon" type="image/x-icon" href="/resources/favicon.png" />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .pb {
+        float: right;
+      }
+      .song {
+        border: 2px solid #dddddd;
+        border-width: 2px;
+        padding: 10px;
+      }
+      .vcenter {
+        padding: 60px 0;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -32,22 +50,32 @@
             <b>Hobbies:</b>
             Language learning, Guitar, Video games, Music production, Singing
             <br />
-            <b>My current favourite song:</b>
           </p>
-          <iframe
-            width="384"
-            height="216"
-            src="https://www.youtube.com/embed/yGLV2ZnveB4"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <br />
-        <br />
-        <h4>Physical Details:</h4>
-        <div>
+          <div class="song clearfix">
+            <iframe
+              class="pb"
+              width="384"
+              height="216"
+              src="https://www.youtube.com/embed/yGLV2ZnveB4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            This is Puma Blue, my current favourite artist. His real name is
+            Jacob Allen, His songs consist of gritty lo-fi sounds, R&B, jazz and
+            hip hop influences. <br /><br />If you liked the song, please check
+            out his recently released album too!
+
+            <br /><br />
+            <b
+              ><a
+                href="https://open.spotify.com/album/5ZFB59cZbuWzd0gPs2b8jg?si=1iy0EtYpThKa11oNvUzv0Q"
+                >In Praise Of Shadows</a
+              ></b
+            >
+          </div>
+          <h4>Physical Details:</h4>
           <p>
             <b>Height:</b> 186cm <br />
             <b>Weight:</b> 77kg <br />
@@ -55,6 +83,8 @@
             <b>Build:</b> Average<br />
           </p>
         </div>
+        <br />
+        <br />
       </article>
     </section>
     <footer>
